@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+</head>
+<body>
+
+	<th:block th:insert="Header.html"></th:block>
+
+
+
+	<h1>Welcome :[[${uname}]]</h1>
+	<hr>
+
+	<div class="text-center">
+		<a href="/department" class="btn btn-danger">AddDepartment</a> <a
+			href="/departmentList" class="btn btn-danger">Department List</a>
+	</div>
+	<hr>
+
+	<div>
+		<img src="image/employee.jpg" width="100%">
+	</div>
+
+
+
+</body>
+</html>

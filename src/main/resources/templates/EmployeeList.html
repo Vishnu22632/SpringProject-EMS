@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee list</title>
+
+
+</head>
+<body>
+
+	<th:block th:insert="Header.html"></th:block>
+
+	<div class="container-fluid">
+		<div class="card">
+
+
+
+			<div class="card-header bg-primary text-center text-white">
+				<h5>Employee List</h5>
+			</div>
+
+
+			<div class="card-body">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Email</th>
+							<th>Salary</th>
+							<th>Phone</th>
+							<th>Action</th>
+						</tr>
+
+
+						<tr th:each="e :${eList}">
+							<td>[[${e.fname}]]</td>
+							<td>[[${e.lname}]]</td>
+							<td>[[${e.email}]]</td>
+							<td>[[${e.salary}]]</td>
+							<td>[[${e.phone}]]</td>
+							
+							<!-- <td><a th:href="@{/dept/edit(id=${d.id})}"><input
+									type="submit" value="Edit" class="btn btn-primary"></a> <a
+								th:href="@{/dept/delete(id=${d.id})}"><input type="submit"
+									value="Delete" class="btn btn-danger"></a></td> -->
+
+
+							<td><a th:href="@{/emp/edit(id=${e.id})}"> <input type="submit"
+									value="Edit" class="btn btn-primary"></a> 
+									<a th:href="@{/emp/delete(id=${e.id})}"> <input type="submit" value="Delete" class="btn btn-danger"></a></td>
+
+
+						</tr>
+
+
+
+
+					</thead>
+				</table>
+
+			</div>
+
+			<div class="card-footer bg-warning text-center">
+				<h6>copyright@2024</h6>
+			</div>
+
+
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>
